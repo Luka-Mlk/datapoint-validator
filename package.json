@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "name": "datapoint-validator",
+  "version": "1.0.0",
+  "main": "Jumbo-Checker.js",
+  "bin": "Jumbo-Checker.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "pkg": {
+    "scripts": [
+      "./pkg/**/**/*",
+      "./handlers/**"
+    ],
+    "assets": [
+      "views/**/*",
+      "public/**/*"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ]
+  }
+}
