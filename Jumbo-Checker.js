@@ -23,7 +23,7 @@ app.get("/", checker.home);
 
 app.post("/data", checker.filter);
 
-app.listen("3000", (err) => {
+app.listen("3030", (err) => {
   if (err) console.log(err);
-  console.log("App started on http://localhost:3000");
+  console.log("App started on http://localhost:3030");
 });
