@@ -35,9 +35,9 @@
         <button type="subim">Start</button>
       </form>
     </main>
+    <% if( locals.available || locals.unavailable ) { let i = 1; let j = 1; let
+    orderSize = 0%>
     <section>
-      <% if( unavailable || available ) { let i = 1; let j = 1; let orderSize =
-      0%>
       <div class="container">
         <h3>Available items</h3>
         <% available.forEach((item) => { %>
@@ -66,7 +66,7 @@
         </div>
         <% }) %>
       </div>
-      <%}%>
     </section>
+    <%}%>
   </body>
 </html>
