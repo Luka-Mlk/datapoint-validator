@@ -9,15 +9,16 @@ const home = (req, res) => {
 const filter = async (req, res) => {
   const directory = req.body.directory;
   const inputsObj = {
+    br: req.body.br,
     articleId: req.body.articleId,
     veroId: req.body.veroId,
     code: req.body.code,
     articleName: req.body.articleName,
     amount: req.body.amount,
+    origin: req.body.origin,
   };
-
   const itemsArr = inputFormatter(inputsObj);
-
+  console.log(itemsArr);
   const files = fileFormatter(directory);
   const availableArr = [];
   const unavailableArr = [];
@@ -29,9 +30,9 @@ const filter = async (req, res) => {
       unavailableArr.push(item);
     }
   });
-  // console.log("Available");
+  // console.log("Available \r\r");
   // console.log(availableArr);
-  // console.log("Unavailable");
+  // console.log("Unavailable \r\r");
   // console.log(unavailableArr);
   res.render("home", { available: availableArr, unavailable: unavailableArr });
 };

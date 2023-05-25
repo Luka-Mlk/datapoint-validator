@@ -1,19 +1,22 @@
 const inputFormatter = (inputs) => {
   // Splitting magic
+  const br = inputs.br.split("\r\n");
   const articleIds = inputs.articleId.split("\r\n");
   const veroIds = inputs.veroId.split("\r\n");
   const codes = inputs.code.split("\r\n");
   const articleNames = inputs.articleName.split("\r\n");
   const amounts = inputs.amount.split("\r\n");
+  const origin = inputs.origin.split("\r\n");
   const allItemsArr = [];
-
   for (let i = 0; i < articleIds.length; i++) {
     const singleObj = {
+      br: br[i],
       articleId: articleIds[i],
       veroId: veroIds[i],
       code: codes[i],
       articleName: articleNames[i],
       amount: amounts[i],
+      origin: origin[i],
     };
     allItemsArr.push(singleObj);
   }
