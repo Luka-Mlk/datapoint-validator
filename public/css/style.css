@@ -26,6 +26,12 @@ form {
   background-color: hsl(219, 63%, 53%);
   border-radius: 10px;
 }
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
 form input,
 textarea {
   resize: none;
@@ -34,7 +40,7 @@ textarea {
   border-radius: 5px;
   border: 0;
   padding: 0.25rem;
-  width: 20rem;
+  width: 15rem;
   height: 20rem;
 }
 #fileDirectory {
@@ -50,4 +56,31 @@ button {
   font-size: 1.25rem;
   font-weight: 200;
   inset: none;
+}
+section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: hsl(219, 63%, 53%);
+  margin: 2rem;
+  padding: 2rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  background-color: hsl(0, 0%, 95%);
+  padding: 2rem;
+  border-radius: 5px;
+}
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  border-bottom: 2px solid hsla(0, 0%, 39%, 0.795);
+  width: 100%;
+  padding: 0.25rem 0;
 }
