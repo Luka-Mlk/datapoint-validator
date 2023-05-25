@@ -20,7 +20,7 @@
           id="fileDirectory"
           placeholder="Enter file directory"
         ></textarea>
-        <div>
+        <div class="inputs">
           <!-- <input type="text" placeholder="АртикалID" /> -->
           <textarea name="articleId" id="" placeholder="АртикалID"></textarea>
           <!-- <input type="text" placeholder="ВероID" /> -->
@@ -35,5 +35,38 @@
         <button type="subim">Start</button>
       </form>
     </main>
+    <section>
+      <% if( unavailable || available ) { let i = 1; let j = 1; let orderSize =
+      0%>
+      <div class="container">
+        <h3>Available items</h3>
+        <% available.forEach((item) => { %>
+        <div class="items">
+          <h5><%= i++ %>.</h5>
+          <h5><%= item.articleId %></h5>
+          <h5><%= item.veroId %></h5>
+          <h5><%= item.code %></h5>
+          <h5><%= item.articleName %></h5>
+          <h5><%= Number(item.amount) + 3 %></h5>
+          <% orderSize += Number(item.amount) + 3 %>
+        </div>
+        <% }) %>
+        <h3>Order amount: <%= orderSize %></h3>
+      </div>
+      <div class="container">
+        <h3>Unavailable items</h3>
+        <% unavailable.forEach((item) => { %>
+        <div class="items">
+          <h5><%= j++ %>.</h5>
+          <h5><%= item.articleId %></h5>
+          <h5><%= item.veroId %></h5>
+          <h5><%= item.code %></h5>
+          <h5><%= item.articleName %></h5>
+          <h5><%= item.amount %></h5>
+        </div>
+        <% }) %>
+      </div>
+      <%}%>
+    </section>
   </body>
 </html>
