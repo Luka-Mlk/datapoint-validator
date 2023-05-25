@@ -8,9 +8,9 @@
   "version": "1.0.0",
   "main": "Jumbo-Checker.js",
   "bin": "Jumbo-Checker.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon Jumbo-Cheker.js"
   },
   "author": "",
   "license": "ISC",
@@ -27,5 +27,8 @@
     "targets": [
       "node18-win-x64"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
