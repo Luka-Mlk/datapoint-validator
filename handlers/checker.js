@@ -7,6 +7,7 @@ const home = (req, res) => {
 };
 
 const filter = async (req, res) => {
+  if (!req.body.directory) res.status(502).send("Directory required");
   const directory = req.body.directory;
   const inputsObj = {
     br: req.body.br,
