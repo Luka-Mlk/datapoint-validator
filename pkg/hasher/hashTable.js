@@ -1,3 +1,4 @@
+// Function used for learning but didint use in app
 function hashStringToInt(string, tableSize) {
   let hash = 17;
 
