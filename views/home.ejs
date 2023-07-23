@@ -21,48 +21,48 @@
           placeholder="Enter file directory"
         ></textarea>
         <div class="inputs">
-          <!-- <input type="text" placeholder="АртикалID" /> -->
+          <textarea name="br" id="" placeholder="Бр."></textarea>
           <textarea name="articleId" id="" placeholder="АртикалID"></textarea>
-          <!-- <input type="text" placeholder="ВероID" /> -->
           <textarea name="veroId" id="" placeholder="ВероID"></textarea>
-          <!-- <input type="text" placeholder="Код на доб." /> -->
           <textarea name="code" id="" placeholder="Код на доб."></textarea>
-          <!-- <input type="text" placeholder="Назив" /> -->
           <textarea name="articleName" id="" placeholder="Назив"></textarea>
-          <!-- <input type="text" placeholder="Количина" /> -->
           <textarea name="amount" id="" placeholder="Количина"></textarea>
+          <textarea name="origin" id="" placeholder="Потекло"></textarea>
         </div>
         <button type="subim">Start</button>
       </form>
     </main>
-    <% if( locals.available || locals.unavailable ) { let i = 1; let j = 1; let
-    orderSize = 0%>
+    <% if( locals.available || locals.unavailable ) { let orderSize = 0; %>
     <section>
       <div class="container">
         <h3>Available items</h3>
+        <h4>Number / ArticleId / VeroId / AritcleName / Amount / Origin</h4>
         <% available.forEach((item) => { %>
         <div class="items">
-          <h5><%= i++ %>.</h5>
+          <h5><%= item.br %></h5>
           <h5><%= item.articleId %></h5>
           <h5><%= item.veroId %></h5>
           <h5><%= item.code %></h5>
           <h5><%= item.articleName %></h5>
-          <h5><%= Number(item.amount) + 3 %></h5>
-          <% orderSize += Number(item.amount) + 3 %>
+          <h5><%= Number(item.amount) + 2 %></h5>
+          <h5><%= item.origin %></h5>
+          <% orderSize += Number(item.amount) + 2 %>
         </div>
         <% }) %>
         <h3>Order amount: <%= orderSize %></h3>
       </div>
       <div class="container">
         <h3>Unavailable items</h3>
+        <h4>Number / ArticleId / VeroId / AritcleName / Amount / Origin</h4>
         <% unavailable.forEach((item) => { %>
         <div class="items">
-          <h5><%= j++ %>.</h5>
+          <h5><%= item.br %>.</h5>
           <h5><%= item.articleId %></h5>
           <h5><%= item.veroId %></h5>
           <h5><%= item.code %></h5>
           <h5><%= item.articleName %></h5>
           <h5><%= item.amount %></h5>
+          <h5><%= item.origin %></h5>
         </div>
         <% }) %>
       </div>
